@@ -8,6 +8,8 @@ namespace MechaRage
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        private Texture2D _texture;
+        private Player _player = new Player();
 
         public MechaRage()
         {
@@ -26,7 +28,8 @@ namespace MechaRage
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            _texture = new Texture2D(GraphicsDevice, 1, 1);
+            _texture.SetData(new Color[] { Color.DarkSlateGray });
             // TODO: use this.Content to load your game content here
         }
 
@@ -35,6 +38,15 @@ namespace MechaRage
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            if(Keyboard.GetState().IsKeyDown(Keys.A))
+                _player.MoveLeft();
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+                _player.MoveRight();
+            if (Keyboard.GetState().IsKeyDown(Keys.W))
+                _player.MoveUp();
+            if (Keyboard.GetState().IsKeyDown(Keys.S))
+                _player.MoveDown();
+
 
             // TODO: Add your update logic here
 
@@ -44,9 +56,10 @@ namespace MechaRage
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            // TODO: Add your drawing code here
-
+            _spriteBatch.Begin();
+            _spriteBatch.Draw(_texture, new Rectangle((int)_player.GetX(), (int)_player.GetY(), 20, 20), Color.White);
+            _spriteBatch.End();
+            
             base.Draw(gameTime);
         }
     }
