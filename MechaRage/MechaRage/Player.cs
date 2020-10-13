@@ -2,6 +2,7 @@ namespace MechaRage
 {
     public class Player
     {
+        private int timeCoef = 50;
         private float X { get; set; }
         private float Y { get; set; }
 
@@ -10,24 +11,24 @@ namespace MechaRage
             X = 100;
             Y = 100;
         }
-        public void MoveUp()
+        public void MoveUp(double elapsedTime)
         {
-            Y -= 10;
+            Y -= 10 * (float)elapsedTime / timeCoef;
         }
 
-        public void MoveDown()
+        public void MoveDown(double elapsedTime)
         {
-            Y += 10;
+            Y += 10 * (float)elapsedTime / timeCoef;
         }
 
-        public void MoveLeft()
+        public void MoveLeft(double elapsedTime)
         {
-            X -= 10;
+            X -= 10 * (float)elapsedTime / timeCoef;
         }
 
-        public void MoveRight()
+        public void MoveRight(double elapsedTime)
         {
-            X += 10;
+            X += 10 * (float)elapsedTime / timeCoef;
         }
 
         public float GetX()

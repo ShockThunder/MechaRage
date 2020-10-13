@@ -8,14 +8,28 @@
         <e p="app.manifest" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
+          <e p="bin" t="Include">
+            <e p="DesktopGL" t="Include">
+              <e p="Content" t="Include">
+                <e p="Tanks.xnb" t="Include" />
+              </e>
+              <e p="Tanks.xnb" t="Include" />
+            </e>
+          </e>
           <e p="Content.mgcb" t="Include" />
           <e p="obj" t="Include">
             <e p="DesktopGL" t="Include">
+              <e p=".mgcontent" t="Include" />
+              <e p=".mgstats" t="Include" />
               <e p="Content" t="Include">
+                <e p=".mgcontent" t="Include" />
                 <e p=".mgstats" t="Include" />
+                <e p="Tanks.mgcontent" t="Include" />
               </e>
+              <e p="Tanks.mgcontent" t="Include" />
             </e>
           </e>
+          <e p="Tanks.png" t="Include" />
         </e>
         <e p="Icon.bmp" t="Include" />
         <e p="Icon.ico" t="Include" />
