@@ -4,12 +4,15 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MechaRage
 {
+    using JetBrains.Annotations;
+
     public class MechaRage : Game
     {
+        [UsedImplicitly]
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private Texture2D _texture;
-        private Player _player = new Player();
+        private readonly Player _player = new Player();
+        private MouseState _currentMouseState;
 
         public MechaRage()
         {
@@ -18,6 +21,7 @@ namespace MechaRage
             IsMouseVisible = true;
         }
 
+        [UsedImplicitly]
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
@@ -28,12 +32,15 @@ namespace MechaRage
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _texture = this.Content.Load<Texture2D>("Tanks");
+            _player.SetTexture(Content.Load<Texture2D>("Tank"));
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
+            
+            _currentMouseState = Mouse.GetState();
+            
             var elapsedTime = gameTime.ElapsedGameTime.TotalMilliseconds;
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
                 Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -56,7 +63,16 @@ namespace MechaRage
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             _spriteBatch.Begin();
-            _spriteBatch.Draw(_texture, new Vector2(_player.GetX(), _player.GetY()), new Rectangle(new Point(102,74), new Point(236,320)), Color.White, 0, new Vector2(0,0), new Vector2((float)0.2, (float)0.2), SpriteEffects.None, 0);
+            _spriteBatch.Draw(
+                _player.GetTexture(), 
+                _player.GetPosition(), 
+                null, 
+                Color.White, 
+                _player.GetRotation(_currentMouseState), 
+                _player.GetOrigin(), 
+                _player.GetScale(), 
+                SpriteEffects.None, 
+                0);
             _spriteBatch.End();
             
             base.Draw(gameTime);

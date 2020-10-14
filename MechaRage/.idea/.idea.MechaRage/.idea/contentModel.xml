@@ -11,8 +11,10 @@
           <e p="bin" t="Include">
             <e p="DesktopGL" t="Include">
               <e p="Content" t="Include">
+                <e p="Tank.xnb" t="Include" />
                 <e p="Tanks.xnb" t="Include" />
               </e>
+              <e p="Tank.xnb" t="Include" />
               <e p="Tanks.xnb" t="Include" />
             </e>
           </e>
@@ -24,11 +26,14 @@
               <e p="Content" t="Include">
                 <e p=".mgcontent" t="Include" />
                 <e p=".mgstats" t="Include" />
+                <e p="Tank.mgcontent" t="Include" />
                 <e p="Tanks.mgcontent" t="Include" />
               </e>
+              <e p="Tank.mgcontent" t="Include" />
               <e p="Tanks.mgcontent" t="Include" />
             </e>
           </e>
+          <e p="Tank.png" t="Include" />
           <e p="Tanks.png" t="Include" />
         </e>
         <e p="Icon.bmp" t="Include" />
