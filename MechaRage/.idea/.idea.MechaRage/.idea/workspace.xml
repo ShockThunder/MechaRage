@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d02e3a63-b213-46b3-b713-1f76d08825c1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MechaRage/Entities/BaseEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/Entities/BaseEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechaRage/Entities/PlayerMecha.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/Entities/PlayerMecha.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MechaRage/GameManagers/EntityManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/GameManagers/EntityManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechaRage/GameManagers/InputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/GameManagers/InputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MechaRage/MechaRage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/MechaRage.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,10 +31,10 @@
         <option value="$PROJECT_DIR$/MechaRage/ResourceManagers/ArtManager.cs" />
         <option value="$PROJECT_DIR$/MechaRage/Helpers/Extensions.cs" />
         <option value="$PROJECT_DIR$/MechaRage/GameManagers/InputManager.cs" />
-        <option value="$PROJECT_DIR$/MechaRage/GameManagers/EntityManager.cs" />
         <option value="$PROJECT_DIR$/MechaRage/Entities/BaseEntity.cs" />
-        <option value="$PROJECT_DIR$/MechaRage/MechaRage.cs" />
         <option value="$PROJECT_DIR$/MechaRage/Entities/PlayerMecha.cs" />
+        <option value="$PROJECT_DIR$/MechaRage/MechaRage.cs" />
+        <option value="$PROJECT_DIR$/MechaRage/GameManagers/EntityManager.cs" />
       </list>
     </option>
   </component>
@@ -92,7 +89,7 @@
       <workItem from="1602682899719" duration="3239000" />
       <workItem from="1602945284341" duration="366000" />
       <workItem from="1602945973034" duration="333000" />
-      <workItem from="1602946399184" duration="5494000" />
+      <workItem from="1602946399184" duration="5579000" />
     </task>
     <servers />
   </component>

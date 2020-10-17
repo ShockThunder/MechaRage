@@ -11,7 +11,7 @@ namespace MechaRage.GameManagers
     {
         private static List<BaseEntity> _entities = new List<BaseEntity>();
 
-        private static bool isUpdating;
+        private static bool _isUpdating;
 
         private static List<BaseEntity> _entitiesToAdd = new List<BaseEntity>();
 
@@ -22,7 +22,7 @@ namespace MechaRage.GameManagers
 
         public static void Add(BaseEntity entity)
         {
-            if (isUpdating)
+            if (_isUpdating)
             {
                 _entitiesToAdd.Add(entity);
             }
@@ -34,14 +34,14 @@ namespace MechaRage.GameManagers
 
         public static void Update()
         {
-            isUpdating = true;
+            _isUpdating = true;
 
             foreach (var entity in _entities)
             {
                 entity.Update();
             }
 
-            isUpdating = false;
+            _isUpdating = false;
 
             foreach (var entity in _entitiesToAdd)
             {

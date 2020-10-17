@@ -1,11 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 
 namespace MechaRage
 {
-    using System.Security.Principal;
-
     using global::MechaRage.Entities;
     using global::MechaRage.GameManagers;
     using global::MechaRage.ResourceManagers;

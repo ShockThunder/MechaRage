@@ -13,6 +13,9 @@ TestResults
 *.user
 *.sln.docstates
 
+##idea dir
+*.idea/ 
+
 # Build results
 [Dd]ebug/
 [Rr]elease/
