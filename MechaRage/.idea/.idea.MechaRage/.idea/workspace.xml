@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d02e3a63-b213-46b3-b713-1f76d08825c1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MechaRage/Entities/BaseEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechaRage/Content/Tank.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechaRage/Content/Tanks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MechaRage/MechaRage.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/MechaRage.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +29,8 @@
         <option value="$PROJECT_DIR$/MechaRage/Player.cs" />
         <option value="$PROJECT_DIR$/MechaRage/Program.cs" />
         <option value="$PROJECT_DIR$/MechaRage/MechaRage.cs" />
+        <option value="$PROJECT_DIR$/MechaRage/Entities/Player.cs" />
+        <option value="$PROJECT_DIR$/MechaRage/Entities/BaseEntity.cs" />
       </list>
     </option>
   </component>
@@ -47,6 +48,7 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.2998366" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -82,7 +84,7 @@
       <workItem from="1602682899719" duration="3239000" />
       <workItem from="1602945284341" duration="366000" />
       <workItem from="1602945973034" duration="333000" />
-      <workItem from="1602946399184" duration="342000" />
+      <workItem from="1602946399184" duration="1529000" />
     </task>
     <servers />
   </component>
@@ -179,5 +181,9 @@
       <screen x="1366" y="0" width="1298" height="768" />
     </state>
     <state x="1607" y="116" key="Rider.ProjectTemplateDialog.Size/0.0.1298.768/1366.0.1298.768@1366.0.1298.768" timestamp="1602515805794" />
+    <state x="1542" y="58" key="SettingsEditor" timestamp="1602947730301">
+      <screen x="1366" y="0" width="1298" height="768" />
+    </state>
+    <state x="1542" y="58" key="SettingsEditor/0.0.1298.768/1366.0.1298.768@1366.0.1298.768" timestamp="1602947730301" />
   </component>
 </project>
