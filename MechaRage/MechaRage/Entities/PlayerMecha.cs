@@ -1,5 +1,7 @@
 namespace MechaRage.Entities
 {
+    using System;
+
     using global::MechaRage.GameManagers;
     using global::MechaRage.Helpers;
     using global::MechaRage.ResourceManagers;
@@ -19,7 +21,7 @@ namespace MechaRage.Entities
             }
         }
 
-        public PlayerMecha()
+        private PlayerMecha()
         {
             Texture = ArtManager.Player;
             Position = MechaRage.ScreenSize / 2;
@@ -29,15 +31,12 @@ namespace MechaRage.Entities
 
         public override void Update()
         {
-            const float speed = 8;
-            Velocity += speed * InputManager.GetMovementDirection();
-            Position += Velocity;
-            Position = Vector2.Clamp(Position, Size / 2, MechaRage.ScreenSize - Size / 2);
-
-            if (Velocity.LengthSquared() > 0)
-            {
-                Orientation = Velocity.ToAngle();
-            }
+            const int speed = 3;
+            var direction =  InputManager.GetMovementDirection();
+            Position += direction * speed;
+            Position = Vector2.Clamp(Position, Size * Scale / 2, MechaRage.ScreenSize - Size * Scale / 2);
+            Orientation = (Position - InputManager.MousePosition).ToAngle() - (float)Math.PI / 2;
+            
         }
     }
 }
