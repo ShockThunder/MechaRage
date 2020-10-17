@@ -11,12 +11,12 @@ namespace MechaRage.Entities
         public Vector2 Position;
         public Vector2 Velocity;
         public float Orientation;
-        
+
         /// <summary>
         /// Radius for collision detection
         /// </summary>
         public float Radius;
-        
+
         public bool IsDestroyed;
 
         public Vector2 Size

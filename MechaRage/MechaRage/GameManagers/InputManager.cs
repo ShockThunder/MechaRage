@@ -9,8 +9,8 @@ namespace MechaRage.GameManagers
         private static KeyboardState _oldKeyboardState;
         private static MouseState _mouseState;
         private static MouseState _oldMouseState;
-        
-        public static Vector2 MousePosition { get {return new Vector2(_mouseState.X, _mouseState.Y);} }
+
+        public static Vector2 MousePosition { get { return new Vector2(_mouseState.X, _mouseState.Y); } }
 
         public static void Update()
         {
@@ -20,7 +20,7 @@ namespace MechaRage.GameManagers
             _keyboardState = Keyboard.GetState();
             _mouseState = Mouse.GetState();
         }
-        
+
         // Checks if a key was just pressed down
         public static bool WasKeyPressed(Keys key)
         {

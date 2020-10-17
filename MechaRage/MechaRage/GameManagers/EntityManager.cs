@@ -12,9 +12,9 @@ namespace MechaRage.GameManagers
         private static List<BaseEntity> _entities = new List<BaseEntity>();
 
         private static bool isUpdating;
-        
+
         private static List<BaseEntity> _entitiesToAdd = new List<BaseEntity>();
-        
+
         public static int Count
         {
             get { return _entities.Count; }

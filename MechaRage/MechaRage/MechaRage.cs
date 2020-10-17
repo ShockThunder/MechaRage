@@ -20,14 +20,14 @@ namespace MechaRage
             get { return Instance.GraphicsDevice.Viewport; }
         }
 
-        public static Vector2 ScreenSize { get{return new Vector2(Viewport.Width, Viewport.Height);} }
+        public static Vector2 ScreenSize { get { return new Vector2(Viewport.Width, Viewport.Height); } }
 
         public static GameTime GameTime { get; private set; }
 
         [UsedImplicitly]
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        
+
 
         public MechaRage()
         {
@@ -43,7 +43,7 @@ namespace MechaRage
         protected override void Initialize()
         {
             Content.RootDirectory = "Content";
-            
+
             base.Initialize();
         }
 
@@ -51,7 +51,7 @@ namespace MechaRage
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             ArtManager.Load(Content);
-            
+
             EntityManager.Add(PlayerMecha.Instance);
         }
 
@@ -70,7 +70,7 @@ namespace MechaRage
             _spriteBatch.Begin(SpriteSortMode.Texture, BlendState.Additive);
             EntityManager.Draw(_spriteBatch);
             _spriteBatch.End();
-            
+
             base.Draw(gameTime);
         }
     }

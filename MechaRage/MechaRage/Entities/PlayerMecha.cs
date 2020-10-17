@@ -32,11 +32,11 @@ namespace MechaRage.Entities
         public override void Update()
         {
             const int speed = 3;
-            var direction =  InputManager.GetMovementDirection();
+            var direction = InputManager.GetMovementDirection();
             Position += direction * speed;
             Position = Vector2.Clamp(Position, Size * Scale / 2, MechaRage.ScreenSize - Size * Scale / 2);
             Orientation = (Position - InputManager.MousePosition).ToAngle() - (float)Math.PI / 2;
-            
+
         }
     }
 }
