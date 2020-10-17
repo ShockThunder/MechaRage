@@ -9,17 +9,21 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
           <e p="Art" t="Include">
-            <e p="Tank.png" t="Include" />
+            <e p="Player.png" t="Include" />
             <e p="Tanks.png" t="Include" />
           </e>
           <e p="bin" t="Include">
             <e p="DesktopGL" t="Include">
+              <e p="Art" t="Include">
+                <e p="Player.xnb" t="Include" />
+              </e>
               <e p="Content" t="Include">
+                <e p="Art" t="Include">
+                  <e p="Player.xnb" t="Include" />
+                </e>
                 <e p="Tank.xnb" t="Include" />
                 <e p="Tanks.xnb" t="Include" />
               </e>
-              <e p="Tank.xnb" t="Include" />
-              <e p="Tanks.xnb" t="Include" />
             </e>
           </e>
           <e p="Content.mgcb" t="Include" />
@@ -27,20 +31,31 @@
             <e p="DesktopGL" t="Include">
               <e p=".mgcontent" t="Include" />
               <e p=".mgstats" t="Include" />
+              <e p="Art" t="Include">
+                <e p="Player.mgcontent" t="Include" />
+              </e>
               <e p="Content" t="Include">
                 <e p=".mgcontent" t="Include" />
                 <e p=".mgstats" t="Include" />
+                <e p="Art" t="Include">
+                  <e p="Player.mgcontent" t="Include" />
+                </e>
                 <e p="Tank.mgcontent" t="Include" />
                 <e p="Tanks.mgcontent" t="Include" />
               </e>
-              <e p="Tank.mgcontent" t="Include" />
-              <e p="Tanks.mgcontent" t="Include" />
             </e>
           </e>
         </e>
         <e p="Entities" t="Include">
           <e p="BaseEntity.cs" t="Include" />
-          <e p="Player.cs" t="Include" />
+          <e p="PlayerMecha.cs" t="Include" />
+        </e>
+        <e p="GameManagers" t="Include">
+          <e p="EntityManager.cs" t="Include" />
+          <e p="InputManager.cs" t="Include" />
+        </e>
+        <e p="Helpers" t="Include">
+          <e p="Extensions.cs" t="Include" />
         </e>
         <e p="Icon.bmp" t="Include" />
         <e p="Icon.ico" t="Include" />
@@ -55,6 +70,9 @@
           </e>
         </e>
         <e p="Program.cs" t="Include" />
+        <e p="ResourceManagers" t="Include">
+          <e p="ArtManager.cs" t="Include" />
+        </e>
       </e>
       <e p="MechaRage.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

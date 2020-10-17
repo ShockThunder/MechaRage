@@ -7,7 +7,7 @@ namespace MechaRage.Entities
     {
         protected Texture2D Texture;
         protected Color Color = Color.White;
-
+        protected float Scale = 1f;
         public Vector2 Position;
         public Vector2 Velocity;
         public float Orientation;
@@ -31,7 +31,7 @@ namespace MechaRage.Entities
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(Texture, Position, null, Color, Orientation, Size / 2f, 1f, 0, 0);
+            spriteBatch.Draw(Texture, Position, null, Color, Orientation, Size / 2f, Scale, 0, 0);
         }
 
     }

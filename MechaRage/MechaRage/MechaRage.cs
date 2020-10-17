@@ -4,77 +4,71 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MechaRage
 {
+    using System.Security.Principal;
+
     using global::MechaRage.Entities;
+    using global::MechaRage.GameManagers;
+    using global::MechaRage.ResourceManagers;
 
     using JetBrains.Annotations;
 
     public class MechaRage : Game
     {
+        public static MechaRage Instance { get; set; }
+        public static Viewport Viewport
+        {
+            get { return Instance.GraphicsDevice.Viewport; }
+        }
+
+        public static Vector2 ScreenSize { get{return new Vector2(Viewport.Width, Viewport.Height);} }
+
+        public static GameTime GameTime { get; private set; }
+
         [UsedImplicitly]
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private readonly Player _player = new Player();
-        private MouseState _currentMouseState;
+        
 
         public MechaRage()
         {
+            Instance = this;
             _graphics = new GraphicsDeviceManager(this);
-            Content.RootDirectory = "Content";
             IsMouseVisible = true;
+
+            _graphics.PreferredBackBufferWidth = 1920;
+            _graphics.PreferredBackBufferHeight = 1080;
         }
 
         [UsedImplicitly]
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
+            Content.RootDirectory = "Content";
+            
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            _player.SetTexture(Content.Load<Texture2D>("Tank"));
-            // TODO: use this.Content to load your game content here
+            ArtManager.Load(Content);
+            
+            EntityManager.Add(PlayerMecha.Instance);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            
-            _currentMouseState = Mouse.GetState();
-            
-            var elapsedTime = gameTime.ElapsedGameTime.TotalMilliseconds;
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-            if(Keyboard.GetState().IsKeyDown(Keys.A))
-                _player.MoveLeft(elapsedTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.D))
-                _player.MoveRight(elapsedTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.W))
-                _player.MoveUp(elapsedTime);
-            if (Keyboard.GetState().IsKeyDown(Keys.S))
-                _player.MoveDown(elapsedTime);
+            GameTime = gameTime;
+            InputManager.Update();
 
-            // TODO: Add your update logic here
-
+            EntityManager.Update();
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            _spriteBatch.Begin();
-            _spriteBatch.Draw(
-                _player.GetTexture(), 
-                _player.GetPosition(), 
-                null, 
-                Color.White, 
-                _player.GetRotation(_currentMouseState), 
-                _player.GetOrigin(), 
-                _player.GetScale(), 
-                SpriteEffects.None, 
-                0);
+            GraphicsDevice.Clear(Color.Black);
+            _spriteBatch.Begin(SpriteSortMode.Texture, BlendState.Additive);
+            EntityManager.Draw(_spriteBatch);
             _spriteBatch.End();
             
             base.Draw(gameTime);
