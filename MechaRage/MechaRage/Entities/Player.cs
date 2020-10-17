@@ -1,4 +1,4 @@
-namespace MechaRage
+namespace MechaRage.Entities
 {
     using System;
 

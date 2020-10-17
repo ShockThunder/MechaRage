@@ -4,6 +4,8 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MechaRage
 {
+    using global::MechaRage.Entities;
+
     using JetBrains.Annotations;
 
     public class MechaRage : Game

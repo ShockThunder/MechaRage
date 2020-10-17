@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d02e3a63-b213-46b3-b713-1f76d08825c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MechaRage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MechaRage/Content/Tank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MechaRage/Content/Tanks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MechaRage/MechaRage.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MechaRage/MechaRage.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +81,8 @@
       <workItem from="1602599410810" duration="6825000" />
       <workItem from="1602682899719" duration="3239000" />
       <workItem from="1602945284341" duration="366000" />
+      <workItem from="1602945973034" duration="333000" />
+      <workItem from="1602946399184" duration="342000" />
     </task>
     <servers />
   </component>

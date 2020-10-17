@@ -8,6 +8,10 @@
         <e p="app.manifest" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Content" t="Include">
+          <e p="Art" t="Include">
+            <e p="Tank.png" t="Include" />
+            <e p="Tanks.png" t="Include" />
+          </e>
           <e p="bin" t="Include">
             <e p="DesktopGL" t="Include">
               <e p="Content" t="Include">
@@ -33,8 +37,9 @@
               <e p="Tanks.mgcontent" t="Include" />
             </e>
           </e>
-          <e p="Tank.png" t="Include" />
-          <e p="Tanks.png" t="Include" />
+        </e>
+        <e p="Entities" t="Include">
+          <e p="Player.cs" t="Include" />
         </e>
         <e p="Icon.bmp" t="Include" />
         <e p="Icon.ico" t="Include" />
@@ -48,7 +53,6 @@
             </e>
           </e>
         </e>
-        <e p="Player.cs" t="Include" />
         <e p="Program.cs" t="Include" />
       </e>
       <e p="MechaRage.sln" t="IncludeFlat" />
