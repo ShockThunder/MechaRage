@@ -10,4 +10,4 @@
      steps:
        - checkout
        - run: ls
-       - run: dotnet build ../MechaRage/MechaRage.sln
+       - run: dotnet build ./MechaRage/MechaRage.sln
