@@ -21,7 +21,11 @@ namespace MechaRage.GameManagers
             _mouseState = Mouse.GetState();
         }
 
-        // Checks if a key was just pressed down
+        /// <summary>
+        /// Checks if a key was just pressed down
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static bool WasKeyPressed(Keys key)
         {
             return _oldKeyboardState.IsKeyUp(key) && _keyboardState.IsKeyDown(key);
