@@ -16,17 +16,18 @@ namespace MechaRage.Entities
             Velocity = velocity;
             Orientation = velocity.ToAngle();
             Radius = 8;
+            Scale = 0.2f;
         }
         public override void Update()
         {
             if (Velocity.LengthSquared() > 0)
             {
-                Orientation = Velocity.ToAngle();
+                Orientation = Velocity.ToAngle() + (float)Math.PI / 2;
             }
 
             Position += Velocity;
 
-            if (MechaRage.Viewport.Bounds.Contains(Position.ToPoint()))
+            if (!MechaRage.Viewport.Bounds.Contains(Position.ToPoint()))
             {
                 IsDestroyed = true;
             }

@@ -31,6 +31,11 @@ namespace MechaRage.GameManagers
             return _oldKeyboardState.IsKeyUp(key) && _keyboardState.IsKeyDown(key);
         }
 
+        public static bool MakeShoot()
+        {
+            return _mouseState.LeftButton == ButtonState.Pressed;
+        }
+        
         public static Vector2 GetMovementDirection()
         {
             var direction = Vector2.Zero;

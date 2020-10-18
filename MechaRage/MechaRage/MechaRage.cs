@@ -63,8 +63,8 @@ namespace MechaRage
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
-            _spriteBatch.Begin(SpriteSortMode.Texture, BlendState.Additive);
+            GraphicsDevice.Clear(Color.Gray);
+            _spriteBatch.Begin(SpriteSortMode.Texture);
             EntityManager.Draw(_spriteBatch);
             _spriteBatch.End();
 
