@@ -11,7 +11,6 @@ namespace MechaRage.Entities
     public class PlayerMecha : BaseEntity
     {
         private static PlayerMecha _instance;
-        private static Random _rand = new Random();
         
         /// <summary>
         /// Player speed in *texture sizes*
@@ -41,8 +40,8 @@ namespace MechaRage.Entities
         {
             Texture = ArtManager.Player;
             Position = MechaRage.ScreenSize / 2;
-            Radius = 10;
             Scale = 0.2f;
+            Radius =  Texture.Width * Scale / 2f;
         }
         
         

@@ -56,7 +56,7 @@ namespace MechaRage
         {
             GameTime = gameTime;
             InputManager.Update();
-
+            EnemySpawner.Update();
             EntityManager.Update();
             base.Update(gameTime);
         }
