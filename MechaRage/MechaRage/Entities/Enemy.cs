@@ -87,7 +87,7 @@ namespace MechaRage.Entities
             {
                 // Draw an expanding, fading-out version of the sprite as part of the spawn-in effect.
                 var factor = _timeUntilStart / 60f;	// decreases from 1 to 0 as the enemy spawns in
-                spriteBatch.Draw(Texture, Position, null, Color.White * factor, Orientation, Size / 2f, 2 - factor, 0, 0);
+                spriteBatch.Draw(Texture, Position, null, Color.White * factor, Orientation, Size / 2f, Scale - factor, 0, 0);
             }
 
             base.Draw(spriteBatch);
@@ -107,7 +107,7 @@ namespace MechaRage.Entities
                 Velocity += (PlayerMecha.Instance.Position - Position).ScaleTo(acceleration);
 
                 if (Velocity != Vector2.Zero)
-                    Orientation = Velocity.ToAngle();
+                    Orientation = Velocity.ToAngle() + (float)Math.PI / 2;
 
                 yield return 0;
             }
